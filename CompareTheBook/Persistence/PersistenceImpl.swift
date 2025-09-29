@@ -2,7 +2,6 @@ import Foundation
 
 struct PersistenceImpl: Persistence {
     private let userDefaults = UserDefaults.standard
-    private let booksKey = "saved_books"
 
     func saveBooks(_ books: [Book]) throws {
         let encoder = JSONEncoder()
@@ -10,14 +9,14 @@ struct PersistenceImpl: Persistence {
 
         do {
             let data = try encoder.encode(books)
-            userDefaults.set(data, forKey: booksKey)
+            userDefaults.set(data, forKey: Constants.saveBooksKey)
         } catch {
             throw CompareTheBookError.persistenceError("Failed to encode books: \(error.localizedDescription)")
         }
     }
 
     func fetchBooks() throws -> [Book] {
-        guard let data = userDefaults.data(forKey: booksKey) else {
+        guard let data = userDefaults.data(forKey: Constants.saveBooksKey) else {
             return []
         }
 

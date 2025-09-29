@@ -72,6 +72,12 @@ final class BookListViewModel {
         }
     }
 
+    @MainActor
+    func resetUserDefaults() {
+        screenState = .loaded([])
+        UserDefaults.standard.removeObject(forKey: "saved_books")
+    }
+
     private func handleError(_ error: Error) {
         var errorMessage = ""
         if let compareError = error as? CompareTheBookError {

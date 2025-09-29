@@ -1,7 +1,7 @@
 import Foundation
 
 struct SubjectRequest: Request {
-    typealias ReturnType = [Book]
+    typealias ReturnType = Root
     let path: String
     let queryItems: [URLQueryItem]?
 

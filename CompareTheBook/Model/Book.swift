@@ -1,3 +1,5 @@
+import Foundation
+
 struct Book: Codable, Identifiable, Equatable {
     struct Author: Codable, Equatable {
         let name: String
