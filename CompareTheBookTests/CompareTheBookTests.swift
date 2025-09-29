@@ -1,10 +1,3 @@
-//
-//  CompareTheBookTests.swift
-//  CompareTheBookTests
-//
-//  Created by Nikash Yogesh Ramsorrun on 29/09/2025.
-//
-
 import XCTest
 
 final class CompareTheBookTests: XCTestCase {
