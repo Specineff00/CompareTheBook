@@ -2,6 +2,6 @@ import Foundation
 
 extension UserDefaults {
     func resetBooks() {
-        removeObject(forKey: Constants.saveBooksKey)
+        removeObject(forKey: Constants.UserDefaults.saveBooksKey)
     }
 }

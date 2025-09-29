@@ -2,7 +2,7 @@
 struct OpenLibraryAPIImpl: OpenLibraryAPI {
     let baseService: BaseServiceProtocol
 
-    init(baseService: BaseServiceProtocol = BaseServiceImpl(baseURL: "https://openlibrary.org")) {
+    init(baseService: BaseServiceProtocol = BaseServiceImpl()) {
         self.baseService = baseService
     }
 

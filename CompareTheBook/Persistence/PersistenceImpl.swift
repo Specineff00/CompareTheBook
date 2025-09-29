@@ -9,14 +9,14 @@ struct PersistenceImpl: Persistence {
 
         do {
             let data = try encoder.encode(books)
-            userDefaults.set(data, forKey: Constants.saveBooksKey)
+            userDefaults.set(data, forKey: Constants.UserDefaults.saveBooksKey)
         } catch {
             throw CompareTheBookError.persistenceError("Failed to encode books: \(error.localizedDescription)")
         }
     }
 
     func fetchBooks() throws -> [Book] {
-        guard let data = userDefaults.data(forKey: Constants.saveBooksKey) else {
+        guard let data = userDefaults.data(forKey: Constants.UserDefaults.saveBooksKey) else {
             return []
         }
 

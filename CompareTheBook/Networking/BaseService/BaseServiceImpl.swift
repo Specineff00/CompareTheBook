@@ -3,7 +3,7 @@ import Foundation
 actor BaseServiceImpl: BaseServiceProtocol {
     let baseURL: String
 
-    init(baseURL: String = "https://pokeapi.co/api/v2") {
+    init(baseURL: String = Constants.API.baseURL) {
         self.baseURL = baseURL
     }
 
