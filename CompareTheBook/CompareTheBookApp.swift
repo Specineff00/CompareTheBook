@@ -11,7 +11,7 @@ import SwiftUI
 struct CompareTheBookApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BookListView()
         }
     }
 }
